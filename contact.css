@@ -1,0 +1,182 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #131313;
+    color: #222;
+}
+.header-top {
+    background: linear-gradient(to bottom, #c70000, #7a0000);
+    padding: 1.2rem 1.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sigla {
+    width: 60px;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #efefef;
+}
+
+nav {
+    background: #a00000;
+    padding: 0.4rem 1.5rem;
+    
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.55rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    display: block;
+}
+
+nav a:hover,
+nav a.active {
+    background: #ffffff;
+    color: #a00000;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 170px;
+    background: #a00000;
+    padding: 0.5rem 0;
+    border-radius: 0 0 6px 6px;
+    z-index: 67;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+}
+.submenu li a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background: #ffffff;
+    color: #a00000;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 1.4rem 1.6rem;
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+    
+}
+h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    position: relative;
+    padding-left: 0.7rem;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    width: 4px;
+    background: #c70000;
+    border-radius: 2px;
+}
+
+h3 {
+    margin-top: 1.5rem;
+    color: #a00000;
+}
+.contact-info p {
+    margin: 0.2rem 0;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111111;
+    color: #eeeeee;
+    margin-top: 2rem;
+}
+.emblema-ch {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 67;
+}
+
+.emblema-ch img {
+    width: 110px;
+    height: auto;
+    opacity: 0.92;
+    border-radius: 8px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.emblema-ch img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+@media (max-width: 900px) {
+    .emblema-ch {
+        display: none;
+    }
+}
+
+.selected {
+  background-color: #ffe6e6;
+}
+
+
+
+
+
+
+

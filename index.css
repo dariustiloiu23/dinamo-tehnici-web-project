@@ -1,0 +1,239 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #131313;
+    
+}
+.header-top {
+    background: linear-gradient(to bottom, #c70000, #7a0000);
+    padding: 1.2rem 1.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sigla {
+    width: 60px;
+    background: #ffffff;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #efefef;
+}
+nav {
+    background: #a00000;
+    padding: 0.4rem 1.5rem;
+    border-bottom: 2px solid #111;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0.55rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    display: block;
+}
+
+nav a:hover,
+nav a.active {
+    background: #ffffff;
+    color: #a00000;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 170px;
+    background: #a00000;
+    padding: 0.5rem 0;
+    border-radius: 0 0 6px 6px;
+    z-index: 999;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+}
+.submenu li a {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background: #ffffff;
+    color: #a00000;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 1.5rem;}
+
+.layout-grid .intro {
+    grid-column: 1 / -1;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 1.4rem 1.6rem;
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+
+    transition: transform 0.22s ease,
+                box-shadow 0.32s ease;}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.22);}
+h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    position: relative;
+    padding-left: 0.7rem;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    width: 4px;
+    background: #c70000;
+    border-radius: 2px;
+}
+#rezultate h2::after {
+    content: "";
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #c70000;
+    animation: pulseDot 1.6s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(-50%) scale(1.5);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.9;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1.2rem;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+thead th {
+    background: #c70000;
+    color: #ffffff;
+    padding: 0.75rem;
+    font-size: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #9a0000;
+}
+
+tbody td {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+tbody tr:nth-of-type(odd) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #fff0f0;
+    transition: background-color 0.2s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111111;
+    color: #eeeeee;
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.emblema-ch {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+}
+
+.emblema-ch img {
+    width: 110px;
+    height: auto;
+    opacity: 0.92;
+    border-radius: 8px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.emblema-ch img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+@media (max-width: 900px) {
+    .emblema-ch {
+        display: none;
+    }
+}
+
